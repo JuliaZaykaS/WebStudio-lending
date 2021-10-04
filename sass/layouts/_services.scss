@@ -1,0 +1,25 @@
+.services {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    z-index: 1;
+
+    .service-card {
+      position: relative;
+    }
+    .service-title {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+
+      padding-top: 27px;
+      padding-bottom: 27px;
+
+      text-align: center;
+
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+}

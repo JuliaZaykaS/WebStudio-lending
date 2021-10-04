@@ -1,0 +1,12 @@
+.regular-clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -30px;
+  margin-bottom: -30px;
+
+  .client {
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+}

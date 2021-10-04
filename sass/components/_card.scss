@@ -1,0 +1,119 @@
+.card-set {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  .card {
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.card {
+  background-color: var(--main-white-color);
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+
+  &-content {
+    font-size: 16px;
+    color: var(--main-text-color);
+    width: 100%;
+
+    & .advantages-content {
+      line-height: 1.71;
+      font-size: 14px;
+    }
+
+    & .member-content {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+
+      line-height: 1.19;
+      text-align: center;
+    }
+
+    & .project-content {
+      color: var(--main-text-color);
+      padding: 20px 24px;
+      line-height: 1.87;
+      border: 1px solid var(--card-border-color);
+
+      border-top: none;
+      flex-grow: 1;
+    }
+  }
+
+  &-with-overlay {
+    position: relative;
+    .card-foto {
+      position: relative;
+      overflow: hidden;
+    }
+    .overlay-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      font-size: 18px;
+      line-height: 1.56;
+      color: var(--main-white-color);
+
+      padding: 77px 24px;
+
+      @media screen and (min-width: $tablet) {
+        padding: 49px 24px;
+      }
+      @media screen and (min-width: $desktop) {
+        padding: 63px 24px;
+      }
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 150, 243, 0.9);
+
+      transform: translateY(100%);
+
+      transition: transform var(--animation-time) var(--timing-function);
+    }
+    &:hover .card-overlay,
+    &:focus .card-overlay {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.project-card,
+.service-card {
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+.hidden-card {
+  display: none;
+}
+
+.active-card {
+  display: block;
+}

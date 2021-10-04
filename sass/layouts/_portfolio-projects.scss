@@ -1,0 +1,48 @@
+.portfolio {
+  border-top: 1px solid var(--section-border-color);
+}
+
+.portfolio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  .pf-button {
+    @media screen and (max-width: $tablet - 1) {
+      margin-bottom: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.projects {
+  .project-card {
+    transition: box-shadow var(--animation-time) var(--timing-function);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    .link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .project-title {
+    margin-bottom: 4px;
+  }
+}

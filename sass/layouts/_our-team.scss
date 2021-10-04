@@ -1,0 +1,11 @@
+.team {
+  background-color: var(--background-button-color);
+
+  &-member {
+    margin-bottom: 10px;
+  }
+
+  &-specialization {
+    margin-bottom: 16px;
+  }
+}
